@@ -4,16 +4,16 @@ on:
     types:
       - opened
   workflow_dispatch:
-  push:  # adding here event filter
+  push:  # adding here event filter`
     branches:
       
     # - 'devlop/*'  #workflow will run on push to any branch starting with devlop
     # - 'devlop-*'  #workflow will run on push to any branch starting with devlop
       - devlop  #workflow will run on push to devlop branch
-    #paths:
-     # - 'public' #workflow will run on push to any branch with changes in public folder
+   # paths:
+    #  - 'public' #workflow will run on push to any branch with changes in public folder
     paths-ignore:
-     -'.github/workflows/demo1.yml'  #workflow will run on push to any branch except .github/workflows/demo1.yml
+      - 'public'  #workflow will run on push to any branch except .github/workflows/demo1.yml
 jobs:
   deploy:
     runs-on: ubuntu-latest
