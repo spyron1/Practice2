@@ -4,6 +4,12 @@ on:
     types:
       - opened
   workflow_dispatch:
+  push:  # adding here event filter
+    branches:
+      
+    # - 'devlop/*'  #workflow will run on push to any branch starting with devlop
+    # - 'devlop-*'  #workflow will run on push to any branch starting with devlop
+      - devlop  #workflow will run on push to devlop branch
 jobs:
   deploy:
     runs-on: ubuntu-latest
