@@ -8,7 +8,7 @@ on:
     branches:
       - devlop  # Workflow will run on push to devlop branch
     paths-ignore:
-      - public # Workflow will not run on push if changes are only in the 'public' directory
+      - 'public/**' # Workflow will not run on push if changes are only in the 'public' directory
 jobs:
   deploy:
     runs-on: ubuntu-latest
