@@ -13,7 +13,7 @@ on:
    # paths:
     #  - 'public' #workflow will run on push to any branch with changes in public folder
     paths-ignore:
-      - 'public'  #workflow will run on push to any branch except .github/workflows/demo1.yml
+      - public #workflow will run on push to any branch except .github/workflows/demo1.yml
 jobs:
   deploy:
     runs-on: ubuntu-latest
